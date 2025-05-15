@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
 
   return (
     <header className='sticky top-1 w-[425px] mx-auto mt-1'>
-      <nav className='bg-gray-50 dark:bg-gray-900 text-zinc-900 dark:text-stone-100 flex justify-center items-center gap-4 border border-b-1 border-slate-700 rounded-full px-4 py-0.5'>
+      <nav className='bg-gray-50 dark:bg-gray-900 text-zinc-900 dark:text-stone-100 flex justify-center items-center gap-4 border border-b-1 border-slate-700 rounded-full px-4 py-0.5 pt-1'>
         <a
           href='#experience'
           className='hover:text-amber-300 transition-colors duration-300'
