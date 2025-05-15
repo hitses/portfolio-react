@@ -9,7 +9,12 @@ export default {
     },
     presentation: {
       title: 'Hola, soy Jero',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      subtitle: {
+        time: '{{years}} años como ',
+        specialist: 'Ingeniero de software en tecnologías Web',
+        from: ' desde España 🇪🇸​',
+        help: 'Ayudo a dar vida a todo tipo de ideas.'
+      }
     },
     experience: {
       title: 'Experiencia Laboral',

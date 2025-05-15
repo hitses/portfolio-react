@@ -9,7 +9,8 @@ export default {
     },
     presentation: {
       title: 'Hi, I am Jero',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      subtitle:
+        '{{years}} years as a Software Engineer in Web technologies from Spain 🇪🇸'
     },
     experience: {
       title: 'Work Experience',
