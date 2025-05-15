@@ -1,12 +1,12 @@
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import i18n from './i18n'
-import Header from './components/Header'
-import Presentation from './components/Presentation'
-import Experience from './components/Experience'
-import Projects from './components/Projects'
-import About from './components/About'
-import Footer from './components/Footer'
+import Header from './views/Header'
+import Presentation from './views/Presentation'
+import Experience from './views/Experience'
+import Projects from './views/Projects'
+import About from './views/About'
+import Footer from './views/Footer'
 
 const App: React.FC = () => {
   return (
