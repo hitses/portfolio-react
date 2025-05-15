@@ -126,7 +126,7 @@ const Navbar: React.FC = () => {
             {/* Sun icon */}
             <svg
               id='theme-toggle-dark-icon'
-              className='w-6 h-6 text-gray-800 dark:text-white hidden hover:text-amber-300 cursor-pointer'
+              className='w-6 h-6 text-gray-800 dark:text-white hidden hover:text-amber-300 cursor-pointer transition-colors duration-300'
               aria-hidden='true'
               xmlns='http://www.w3.org/2000/svg'
               width='24'
@@ -145,7 +145,7 @@ const Navbar: React.FC = () => {
             {/* Moon icon */}
             <svg
               id='theme-toggle-light-icon'
-              className='w-5 h-5 text-gray-800 dark:text-white hover:text-slate-400 cursor-pointer'
+              className='w-5 h-5 text-gray-800 dark:text-white hover:text-slate-400 cursor-pointer transition-colors duration-300'
               aria-hidden='true'
               xmlns='http://www.w3.org/2000/svg'
               width='24'

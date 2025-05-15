@@ -9,8 +9,13 @@ export default {
     },
     presentation: {
       title: 'Hi, I am Jero',
-      subtitle:
-        '{{years}} years as a Software Engineer in Web technologies from Spain 🇪🇸'
+      subtitle: {
+        time: '{{years}} years as a ',
+        specialist: 'Software Engineer in Web technologies',
+        from: ' from Spain 🇪🇸',
+        help: 'I help bring all kinds of ideas to life.'
+      }
+      // ''
     },
     experience: {
       title: 'Work Experience',
