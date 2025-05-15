@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 
 type ButtonProps = {
   link: string
-  icon: ReactNode // El SVG o cualquier otro componente React
+  icon: ReactNode
   label: string
 }
 

@@ -14,7 +14,7 @@ const App: React.FC = () => {
       <main className='max-w-[900px] mx-auto'>
         <Header />
         <Presentation />
-        {/* <Experience /> */}
+        <Experience />
         <Projects />
         <About />
         <Footer />
