@@ -5,10 +5,10 @@ const Presentation: React.FC = () => {
   const { t } = useTranslation()
 
   return (
-    <>
+    <section>
       <h1>{t('presentation.title')}</h1>
       <p>{t('presentation.subtitle')}</p>
-    </>
+    </section>
   )
 }
 
