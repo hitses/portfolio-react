@@ -1,11 +1,28 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
+import { Sun } from '../assets/imgs/Sun'
+import { Moon } from '../assets/imgs/Moon'
+
 const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation()
 
   const toggleLanguage = () => {
     i18n.changeLanguage(i18n.language === 'es' ? 'en' : 'es')
+  }
+
+  const toggleTheme = () => {
+    if (
+      localStorage.getItem('color-theme') === 'dark' ||
+      (!('color-theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('color-theme', 'light')
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('color-theme', 'dark')
+    }
   }
 
   return (
@@ -55,6 +72,14 @@ const Navbar: React.FC = () => {
             />
           </svg>
         </div>
+        <button
+          onClick={toggleTheme}
+          type='button'
+          className='focus:outline-none focus:ring-0'
+        >
+          <Sun />
+          <Moon />
+        </button>
       </nav>
     </header>
   )
