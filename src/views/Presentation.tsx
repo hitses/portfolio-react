@@ -39,9 +39,17 @@ const Presentation: React.FC = () => {
 
       {/* Links */}
       <div className='flex gap-4 mt-8'>
-        <Button icon={Envelope()} label='Contacta conmigo' />
+        <Button
+          link='mailto:jerogassan@gmail.com'
+          icon={Envelope()}
+          label={t('presentation.buttons.contact')}
+        />
 
-        <Button icon={Linkedin()} label='LinkedIn' />
+        <Button
+          link='https://www.linkedin.com/in/jerogassan/'
+          icon={Linkedin()}
+          label='LinkedIn'
+        />
       </div>
       {/* Links */}
     </section>

@@ -13,7 +13,10 @@ export default {
         time: '{{years}} años como ',
         specialist: 'Ingeniero de software en tecnologías Web',
         from: ' desde España 🇪🇸​',
-        help: 'Ayudo a dar vida a todo tipo de ideas.'
+        help: 'Ayudo a dar vida a todo tipo de ideas'
+      },
+      buttons: {
+        contact: 'Contacta conmigo'
       }
     },
     experience: {

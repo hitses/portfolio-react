@@ -13,9 +13,11 @@ export default {
         time: '{{years}} years as a ',
         specialist: 'Software Engineer in Web technologies',
         from: ' from Spain 🇪🇸',
-        help: 'I help bring all kinds of ideas to life.'
+        help: 'I help bring all kinds of ideas to life'
+      },
+      buttons: {
+        contact: 'Contact me'
       }
-      // ''
     },
     experience: {
       title: 'Work Experience',
