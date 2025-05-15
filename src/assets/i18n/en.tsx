@@ -20,7 +20,7 @@ export default {
       }
     },
     experience: {
-      title: 'Work Experience',
+      title: 'Professional career',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
     },
     projects: {

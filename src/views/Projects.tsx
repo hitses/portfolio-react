@@ -11,6 +11,7 @@ const Projects: React.FC = () => {
     title: string
     description: string
     link: string
+    img: string
   }[]
 
   return (
@@ -28,6 +29,7 @@ const Projects: React.FC = () => {
             title={project.title}
             description={project.description}
             link={project.link}
+            img={project.img}
           />
         ))}
       </div>

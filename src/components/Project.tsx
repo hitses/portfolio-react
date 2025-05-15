@@ -6,6 +6,7 @@ type ProjectProps = {
   title: string
   description: string
   link: string
+  img: string
 }
 
 export const Project = ({
@@ -13,7 +14,8 @@ export const Project = ({
   sector,
   title,
   description,
-  link
+  link,
+  img
 }: ProjectProps) => {
   const { t } = useTranslation()
 
@@ -61,7 +63,8 @@ export const Project = ({
             <img
               alt='Rediseño de Marca para Artesanía Local'
               className='object-cover transition-transform duration-500 group-hover:scale-105'
-              src='https://placehold.co/800x600/EEE/31343C'
+              src={img}
+              loading='lazy'
             />
           </div>
           <div className='absolute inset-0 border border-neutral-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
