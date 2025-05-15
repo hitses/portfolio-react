@@ -9,24 +9,36 @@ const Navbar: React.FC = () => {
   }
 
   return (
-    <header>
-      <nav className='flex justify-center items-center gap-4'>
-        <a href='#experience' className='text-gray-800 dark:text-white'>
+    <header className='sticky top-1 w-[425px] mx-auto mt-1'>
+      <nav className='bg-gray-50 dark:bg-gray-900 text-zinc-900 dark:text-stone-100 flex justify-center items-center gap-4 border border-b-1 border-slate-700 rounded-full px-4 py-0.5'>
+        <a
+          href='#experience'
+          className='hover:text-amber-300 transition-colors duration-300'
+        >
           {t('navbar.experience')}
         </a>
-        <a href='#projects' className='text-gray-800 dark:text-white'>
+        <a
+          href='#projects'
+          className='hover:text-amber-300 transition-colors duration-300'
+        >
           {t('navbar.projects')}
         </a>
-        <a href='#about' className='text-gray-800 dark:text-white'>
+        <a
+          href='#about'
+          className='hover:text-amber-300 transition-colors duration-300'
+        >
           {t('navbar.about')}
         </a>
-        <a href='#contact' className='text-gray-800 dark:text-white'>
+        <a
+          href='#contact'
+          className='hover:text-amber-300 transition-colors duration-300'
+        >
           {t('navbar.contact')}
         </a>
-        <div className='w-6 cursor-pointer'>
+        <div className='w-6 cursor-pointer hover:text-amber-300 transition-colors duration-300'>
           <svg
             onClick={toggleLanguage}
-            className='w-6 h-6 text-gray-800 dark:text-white'
+            className='w-6 h-6'
             aria-hidden='true'
             xmlns='http://www.w3.org/2000/svg'
             width='24'
