@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
         ></div>
       )}
 
-      <header className='sticky top-1 w-[450px] mx-auto mt-1'>
+      <header className='sticky top-1 w-[450px] mx-auto mt-1 z-10'>
         <nav className='bg-gray-50 dark:bg-gray-900 text-zinc-900 dark:text-stone-100 flex justify-center items-center gap-4 border border-b-1 border-slate-700 rounded-full px-4 py-0.5 pt-1'>
           {navElements.map(element => (
             <a

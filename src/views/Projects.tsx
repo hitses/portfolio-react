@@ -1,16 +1,38 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-
+import React from 'react'
+import { useTranslation } from 'react-i18next'
+import { Project } from '../components/Project'
 
 const Projects: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
+
+  const projects = t('projects.projects', { returnObjects: true }) as {
+    year: number
+    sector: string
+    title: string
+    description: string
+    link: string
+  }[]
 
   return (
-    <>
-      <h2>{t('projects.title')}</h2>
-      <p>{t('projects.description')}</p>
-    </>
-  );
-};
+    <section>
+      <h2 className='text-4xl md:text-5xl font-light dark:text-white mb-16'>
+        {t('projects.title')}
+      </h2>
 
-export default Projects;
+      <div className='space-y-32'>
+        {projects.map((project, index) => (
+          <Project
+            key={index}
+            year={project.year}
+            sector={project.sector}
+            title={project.title}
+            description={project.description}
+            link={project.link}
+          />
+        ))}
+      </div>
+    </section>
+  )
+}
+
+export default Projects

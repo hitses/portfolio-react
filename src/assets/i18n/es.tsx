@@ -25,7 +25,25 @@ export default {
     },
     projects: {
       title: 'Proyectos',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      view: 'Ver proyecto',
+      projects: [
+        {
+          year: 2025,
+          sector: 'Logística',
+          title: 'Tyboc',
+          description:
+            'Aplicación que permite conectar a empresas con camioneros para la gestión de cargas y descargas de manera automatizada y con pagos seguros.',
+          link: 'https://tyboc.com'
+        },
+        {
+          year: 2024,
+          sector: 'Economía',
+          title: 'Monedero de Fading Suns',
+          description:
+            'Aplicación que permite gestionar el dinero de los personajes de un juego de rol de mesa, con un sistema de gestión de gastos y experiencia.',
+          link: 'https://monedero-fading-suns.web.app/'
+        }
+      ]
     },
     about: {
       title: 'Sobre Mí',

@@ -25,7 +25,25 @@ export default {
     },
     projects: {
       title: 'Projects',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      view: 'View project',
+      projects: [
+        {
+          year: 2025,
+          sector: 'Logistics',
+          title: 'Tyboc',
+          description:
+            'An application that connects companies with truckers for automated loading and unloading management with secure payments.',
+          link: 'https://tyboc.com'
+        },
+        {
+          year: 2024,
+          sector: 'Economy',
+          title: 'Fading Suns Wallet',
+          description:
+            'An application that allows you to manage the money of characters in a tabletop role-playing game, with an expense and experience management system.',
+          link: 'https://monedero-fading-suns.web.app/'
+        }
+      ]
     },
     about: {
       title: 'About Me',
