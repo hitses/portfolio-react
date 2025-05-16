@@ -22,32 +22,6 @@ const Navbar: React.FC = () => {
     i18n.changeLanguage(i18n.language === 'es' ? 'en' : 'es')
   }
 
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode)
-
-    if (
-      localStorage.getItem('color-theme') === 'dark' ||
-      (!('color-theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark')
-      document
-        .getElementById('theme-toggle-dark-icon')!
-        .classList.remove('hidden')
-      document
-        .getElementById('theme-toggle-light-icon')!
-        .classList.add('hidden')
-      localStorage.setItem('color-theme', 'light')
-    } else {
-      document.documentElement.classList.remove('dark')
-      document
-        .getElementById('theme-toggle-light-icon')!
-        .classList.remove('hidden')
-      document.getElementById('theme-toggle-dark-icon')!.classList.add('hidden')
-      localStorage.setItem('color-theme', 'dark')
-    }
-  }
-
   const [isDarkMode, setIsDarkMode] = useState(() => {
     if (localStorage.getItem('color-theme') === 'dark') {
       return true
@@ -58,6 +32,32 @@ const Navbar: React.FC = () => {
     }
   })
 
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode)
+
+    if (
+      localStorage.getItem('color-theme') === 'dark' ||
+      (!('color-theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark')
+      document
+        .getElementById('theme-toggle-dark-icon')
+        ?.classList.remove('hidden')
+      document
+        .getElementById('theme-toggle-light-icon')
+        ?.classList.add('hidden')
+      localStorage.setItem('color-theme', 'light')
+    } else {
+      document.documentElement.classList.remove('dark')
+      document
+        .getElementById('theme-toggle-light-icon')
+        ?.classList.remove('hidden')
+      document.getElementById('theme-toggle-dark-icon')?.classList.add('hidden')
+      localStorage.setItem('color-theme', 'dark')
+    }
+  }
+
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark')
@@ -67,6 +67,12 @@ const Navbar: React.FC = () => {
       localStorage.setItem('color-theme', 'light')
     }
   }, [isDarkMode])
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false)
+  }
 
   return (
     <>
@@ -90,9 +96,10 @@ const Navbar: React.FC = () => {
         <button
           data-collapse-toggle='navbar-hamburger'
           type='button'
-          className='fixed left-8 top-8 md:hidden inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
+          className='fixed left-8 top-8 md:hidden inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-none dark:text-gray-400 dark:hover:bg-gray-700  bg-neutral-300 dark:bg-neutral-700'
           aria-controls='navbar-hamburger'
-          aria-expanded='false'
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen(prev => !prev)}
         >
           <span className='sr-only'>Open main menu</span>
           <svg
@@ -122,55 +129,75 @@ const Navbar: React.FC = () => {
                   ? 'text-amber-300 font-semibold'
                   : ''
               }`}
+              onClick={handleLinkClick}
             >
               {element.label}
             </a>
           ))}
+
           <div className='w-6 cursor-pointer hover:text-amber-300 transition-colors'>
-            <Multilanguage toggleLanguage={toggleLanguage} />
+            <Multilanguage
+              toggleLanguage={() => {
+                toggleLanguage()
+                setIsMenuOpen(false)
+              }}
+            />
           </div>
+
           <button
-            onClick={toggleTheme}
+            onClick={() => {
+              toggleTheme()
+              setIsMenuOpen(false)
+            }}
             type='button'
             className='focus:outline-none focus:ring-0'
           >
             <Sun />
-
             <Moon />
           </button>
         </nav>
 
         <nav
           id='navbar-hamburger'
-          className='hidden w-fit fixed top-20 left-8 bg-gray-50 dark:bg-gray-900 text-zinc-900 dark:text-stone-100 border border-b-1 border-slate-700 rounded-lg px-4 py-0.5 pt-1'
+          className={`${
+            isMenuOpen ? 'block' : 'hidden'
+          } w-fit fixed top-20 left-8 bg-gray-50 dark:bg-gray-900 text-zinc-900 dark:text-stone-100 border border-b-1 border-slate-700 rounded-lg px-4 py-0.5 pt-1`}
         >
           {navElements.map(element => (
-            <>
+            <React.Fragment key={element.label}>
               <a
-                key={element.label}
                 href={element.href}
                 className={`hover:text-amber-300 transition-colors ${
                   activeSection === element.href.replace('#', '')
                     ? 'text-amber-300 font-semibold'
                     : ''
                 }`}
+                onClick={handleLinkClick}
               >
                 {element.label}
               </a>
-
               <br />
-            </>
+            </React.Fragment>
           ))}
+
           <div className='w-6 cursor-pointer hover:text-amber-300 transition-colors'>
-            <Multilanguage toggleLanguage={toggleLanguage} />
+            <Multilanguage
+              toggleLanguage={() => {
+                toggleLanguage()
+                setIsMenuOpen(false)
+              }}
+            />
           </div>
+
           <button
-            onClick={toggleTheme}
+            onClick={() => {
+              toggleTheme()
+              setIsMenuOpen(false)
+            }}
             type='button'
             className='focus:outline-none focus:ring-0'
           >
             <Sun />
-
             <Moon />
           </button>
         </nav>
