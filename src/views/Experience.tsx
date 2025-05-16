@@ -16,7 +16,7 @@ const Experience: React.FC = () => {
       backgroundColor: string
       borderColor: string
       textColor: string
-      icon: React.ReactNode
+      icon: string
     }[]
     description: string
     achievements: string[]

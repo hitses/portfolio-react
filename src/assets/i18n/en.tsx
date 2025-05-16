@@ -1,3 +1,14 @@
+import {
+  angular,
+  aws,
+  cloudflare,
+  git,
+  mongodb,
+  mysql,
+  nodejs,
+  python
+} from '../../utils/technologies'
+
 export default {
   translation: {
     navbar: {
@@ -26,6 +37,7 @@ export default {
           date: '2022 - present',
           title: 'Tyboc',
           position: 'Chief Technology Officer',
+          badges: [nodejs, mongodb, angular, cloudflare, git],
           description:
             'I led the development of an automated logistics management platform, enabling integration with secure payments through Stripe and PayPal. I implemented an order and shipping management system. I implemented the integration of a mapping system for real-time delivery route and location optimization.',
           achievements: [
@@ -38,6 +50,7 @@ export default {
           date: '2023',
           title: 'Muchosol',
           position: 'Backend Developer',
+          badges: [nodejs, mysql, angular, git],
           description:
             'I developed a vacation package management gateway between the proprietary API and third-party APIs. I implemented an event queue system for booking management. I fixed bugs in the front-end and client service for sample and payment management.',
           achievements: [
@@ -50,6 +63,7 @@ export default {
           date: '2022',
           title: 'Capgemini',
           position: 'Backend Developer',
+          badges: [nodejs, mysql, aws, git],
           description:
             'I implemented performance and responsiveness improvements for a banking management API. I performed DevOps tasks for server management and Lambda service deployment. I implemented an error and log management system for the API.',
           achievements: [
@@ -62,6 +76,7 @@ export default {
           date: '2021',
           title: 'Convotis Iberia',
           position: 'Fullstack Developer',
+          badges: [nodejs, mongodb, mysql, angular, git],
           description:
             'I optimized the performance of an environmental application for CO2 management. I participated in the development of a healthcare API for an international client. I participated in the revamp of the corporate website of a major fashion brand.',
           achievements: [
@@ -74,6 +89,7 @@ export default {
           date: '2020',
           title: 'NTT Data',
           position: 'Fullstack Developer',
+          badges: [nodejs, python, mongodb, mysql, angular, aws, git],
           description:
             'I was the lead developer for maintaining an internal management application for the energy sector. I maintained the API for services deployed on AWS.',
           achievements: [
@@ -86,6 +102,7 @@ export default {
           date: '2029',
           title: 'Lotería El Negrito',
           position: 'Fullstack Developer',
+          badges: [nodejs, mysql, angular, git],
           description:
             'I developed solutions for an automated management application for shared lottery tickets before a notary. I added features for internal company management. I began developing an application for sharing lottery tickets between different administrations.',
           achievements: [
@@ -106,7 +123,8 @@ export default {
           title: 'Tyboc',
           description:
             'An application that connects companies with truckers for automated loading and unloading management with secure payments.',
-          link: 'https://tyboc.com'
+          link: 'https://tyboc.com',
+          img: '/tyboc.webp'
         },
         {
           year: 2024,
@@ -114,7 +132,8 @@ export default {
           title: 'Fading Suns Wallet',
           description:
             'An application that allows you to manage the money of characters in a tabletop role-playing game, with an expense and experience management system.',
-          link: 'https://monedero-fading-suns.web.app/'
+          link: 'https://monedero-fading-suns.web.app/',
+          img: '/fadingSunsWallet.webp'
         }
       ]
     },
