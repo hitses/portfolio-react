@@ -138,8 +138,13 @@ export default {
       ]
     },
     about: {
-      title: 'Sobre Mí',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      title: 'La persona detrás del trabajo',
+      description: {
+        earning:
+          'Mi nombre es Jerónimo, aunque muchos me conocen como Jero. Comencé en el mundo de la programación por el 2019, después de haber trabajado como técnico y sentir una atracción creciente por el desarrollo. Esa curiosidad pronto se transformó en pasión y con el tiempo me permitió liderar técnicamente varios proyectos desde su concepción hasta su lanzamiento.',
+        actually:
+          'Entre los logros que más valoro está el desarrollo y la puesta en producción de una aplicación web corporativa para el sector logístico. Este proyecto no solo representó un reto técnico, sino también una oportunidad para demostrar cómo una solución bien diseñada puede tener un impacto real en operaciones complejas.'
+      }
     },
     footer: {
       copyright: '© {{year}} [Tu Nombre]. Todos los derechos reservados.'

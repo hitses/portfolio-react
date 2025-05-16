@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
   }[]
 
   return (
-    <section>
+    <section className='mb-24'>
       <h2 className='text-4xl md:text-5xl font-light dark:text-white mb-16'>
         {t('projects.title')}
       </h2>

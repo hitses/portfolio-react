@@ -11,7 +11,7 @@ import Footer from './views/Footer'
 const App: React.FC = () => {
   return (
     <I18nextProvider i18n={i18n}>
-      <main className='max-w-[900px] mx-auto'>
+      <main className='max-w-[900px] mx-auto p-16 lg:py-0'>
         <Header />
         <Presentation />
         <Experience />

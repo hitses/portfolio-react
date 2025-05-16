@@ -138,8 +138,13 @@ export default {
       ]
     },
     about: {
-      title: 'About Me',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      title: 'The person behind the work',
+      description: {
+        earning:
+          'My name is Jerónimo, although many know me as Jero. I started in the world of programming around 2019, after working as a technician and feeling a growing attraction to development. That curiosity soon transformed into passion and over time allowed me to technically lead several projects from conception to launch.',
+        actually:
+          'Among my most valuable achievements is the development and deployment of a corporate web application for the logistics sector. This project not only represented a technical challenge but also an opportunity to demonstrate how a well-designed solution can have a real impact on complex operations.'
+      }
     },
     footer: {
       copyright: '© {{year}} [Your Name]. All rights reserved.'
