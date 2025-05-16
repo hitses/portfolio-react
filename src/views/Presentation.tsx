@@ -27,18 +27,18 @@ const Presentation: React.FC = () => {
         {t('presentation.title')}
       </h1>
 
-      <p className='text-2xl font-normal text-gray-500 dark:text-gray-400 w-[400px] text-pretty'>
+      <p className='text-xl md:text-2xl font-normal text-gray-500 dark:text-gray-400 max-w-[400px] text-pretty'>
         {t('presentation.subtitle.time', { years: yearDate })}
         <span className='text-amber-300'>
           {t('presentation.subtitle.specialist')}
         </span>{' '}
-        <span>{t('presentation.subtitle.from')}</span>
+        <span>{t('presentation.subtitle.from')}</span>{' '}
         <span>{t('presentation.subtitle.help')}</span>
       </p>
       {/* Info */}
 
       {/* Links */}
-      <div className='flex gap-4 mt-8'>
+      <div className='flex gap-4 mt-4 flex-col md:flex-row md:mt-8'>
         <Button
           link='mailto:jerogassan@gmail.com'
           icon={Envelope()}
