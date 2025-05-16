@@ -147,7 +147,8 @@ export default {
       }
     },
     footer: {
-      copyright: '© {{year}} [Tu Nombre]. Todos los derechos reservados.'
+      copyright: '© {{year}} {{name}}. Con todo mi ❤️ al sector del desarrollo',
+      contact: 'Contacto'
     }
   }
 }

@@ -1,40 +1,35 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const Footer: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
+
+  const actualYear = new Date().getFullYear()
 
   return (
-    <>
-      <div>
-        <a 
-          href="https://github.com/yourusername" 
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          <FaGithub />
-        </a>
-        <a 
-          href="https://linkedin.com/in/yourusername" 
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin />
-        </a>
-        <a 
-          href="https://twitter.com/yourusername" 
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          <FaTwitter />
-        </a>
+    <footer>
+      <div className='rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4'>
+        <span className='text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90'>
+          {t('footer.copyright', {
+            year: actualYear,
+            name: 'Jero'
+          })}
+        </span>
+        <ul className='flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0'>
+          <li>
+            <a
+              href='mailto:jerogassan@gmail.com'
+              className='hover:underline'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {t('footer.contact')}
+            </a>
+          </li>
+        </ul>
       </div>
-      <p>
-        {t('footer.copyright', { year: new Date().getFullYear() })}
-      </p>
-    </>
-  );
-};
+    </footer>
+  )
+}
 
-export default Footer;
+export default Footer
