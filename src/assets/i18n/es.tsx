@@ -33,6 +33,13 @@ export default {
             'Desarrollé la primera plataforma de gestión logística automatizada para el sector del transporte de mercancías pesadas',
             'Implementé un diseño responsivo y accesible, mejorando la UX/UI de la plataforma y reduciendo el tiempo de carga',
             'Mentorización de dos desarrolladores junior, facilitando su crecimiento técnico'
+          ],
+          badges: [
+            {
+              technology: 'NodeJs',
+              color: 'bg-blue-100 text-blue-800',
+              icon: 'react'
+            }
           ]
         },
         {

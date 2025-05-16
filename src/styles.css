@@ -15,4 +15,6 @@
 
 @theme {
   --font-sans: 'Roboto', system-ui, sans-serif;
+
+  --node-text: #215732;
 }
