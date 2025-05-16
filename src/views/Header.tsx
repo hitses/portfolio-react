@@ -90,7 +90,7 @@ const Navbar: React.FC = () => {
         <button
           data-collapse-toggle='navbar-hamburger'
           type='button'
-          className='inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
+          className='fixed left-8 top-8 md:hidden inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
           aria-controls='navbar-hamburger'
           aria-expanded='false'
         >
@@ -111,10 +111,8 @@ const Navbar: React.FC = () => {
             />
           </svg>
         </button>
-        <nav
-          id='navbar-hamburger'
-          className='bg-gray-50 dark:bg-gray-900 text-zinc-900 dark:text-stone-100 lg:flex justify-center items-center gap-4 border border-b-1 border-slate-700 rounded-full px-4 py-0.5 pt-1 hidden'
-        >
+
+        <nav className='hidden md:flex bg-gray-50 dark:bg-gray-900 text-zinc-900 dark:text-stone-100 flex-col md:flex-row justify-center items-center gap-4 border border-b-1 border-slate-700 rounded-full px-4 py-0.5 pt-1'>
           {navElements.map(element => (
             <a
               key={element.label}
@@ -141,43 +139,41 @@ const Navbar: React.FC = () => {
             <Moon />
           </button>
         </nav>
-        <div className='hidden w-full' id='navbar-hamburger'>
-          <ul className='flex flex-col font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700'>
-            <li>
+
+        <nav
+          id='navbar-hamburger'
+          className='hidden w-fit fixed top-20 left-8 bg-gray-50 dark:bg-gray-900 text-zinc-900 dark:text-stone-100 border border-b-1 border-slate-700 rounded-lg px-4 py-0.5 pt-1'
+        >
+          {navElements.map(element => (
+            <>
               <a
-                href='#'
-                className='block py-2 px-3 text-white bg-blue-700 rounded-sm dark:bg-blue-600'
-                aria-current='page'
+                key={element.label}
+                href={element.href}
+                className={`hover:text-amber-300 transition-colors ${
+                  activeSection === element.href.replace('#', '')
+                    ? 'text-amber-300 font-semibold'
+                    : ''
+                }`}
               >
-                Home
+                {element.label}
               </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                className='block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
-              >
-                Services
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                className='block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white'
-              >
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                className='block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
+
+              <br />
+            </>
+          ))}
+          <div className='w-6 cursor-pointer hover:text-amber-300 transition-colors'>
+            <Multilanguage toggleLanguage={toggleLanguage} />
+          </div>
+          <button
+            onClick={toggleTheme}
+            type='button'
+            className='focus:outline-none focus:ring-0'
+          >
+            <Sun />
+
+            <Moon />
+          </button>
+        </nav>
       </header>
     </>
   )
