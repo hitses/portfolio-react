@@ -1,4 +1,3 @@
-// es.js
 export default {
   translation: {
     navbar: {
@@ -27,25 +26,43 @@ export default {
           date: '2022 - presente',
           title: 'Tyboc',
           position: 'Director de Tecnología',
+          badges: [
+            {
+              name: 'NodeJs',
+              backgroundColor: '#6cc24a',
+              borderColor: '#44883e',
+              textColor: '#333333',
+              icon: 'Nodejs'
+            },
+            {
+              name: 'Angular',
+              backgroundColor: '#f0f0f0',
+              borderColor: '#DD0031',
+              textColor: '#333333',
+              icon: 'Angular'
+            }
+          ],
           description:
             'Lideré el desarrollo de una plataforma de gestión logística automatizada, haciendo posible la integración con pagos seguros a través de Stripe y Paypal. Implementé un sistema de gestión de pedidos y envíos. Implementé la integración de un sistema de mapas para la optimización de rutas de entrega y ubicación en tiempo real.',
           achievements: [
             'Desarrollé la primera plataforma de gestión logística automatizada para el sector del transporte de mercancías pesadas',
             'Implementé un diseño responsivo y accesible, mejorando la UX/UI de la plataforma y reduciendo el tiempo de carga',
             'Mentorización de dos desarrolladores junior, facilitando su crecimiento técnico'
-          ],
-          badges: [
-            {
-              technology: 'NodeJs',
-              color: 'bg-blue-100 text-blue-800',
-              icon: 'react'
-            }
           ]
         },
         {
           date: '2023',
           title: 'Muchosol',
           position: 'Desarrollador Backend',
+          badges: [
+            {
+              name: 'NodeJs',
+              backgroundColor: '#6cc24a',
+              borderColor: '#44883e',
+              textColor: '#333333',
+              icon: 'Nodejs'
+            }
+          ],
           description:
             'Desarrollé una pasarela de gestión de paquetes vacacionales entre la API propietaria y APIs de terceros. Implementé un sistema de colas de eventos para la gestión de reservas. Corergí errores en la parte Frontend el servicio cliente sobre la muestra y gestión de pagos.',
           achievements: [
@@ -58,6 +75,15 @@ export default {
           date: '2022',
           title: 'Capgemini',
           position: 'Desarrollador Backend',
+          badges: [
+            {
+              name: 'NodeJs',
+              backgroundColor: '#6cc24a',
+              borderColor: '#44883e',
+              textColor: '#333333',
+              icon: 'Nodejs'
+            }
+          ],
           description:
             'Realicé mejoras de rendimiento y respuesta en una API de gestión bancaria. Realicé tareas DevOps para la gestión de servidores y despliegue de servicios lambda. Implementé un sistema de gestión de errores y logs para la API.',
           achievements: [
@@ -70,6 +96,15 @@ export default {
           date: '2021',
           title: 'Convotis Iberia',
           position: 'Desarrollador Fullstack',
+          badges: [
+            {
+              name: 'NodeJs',
+              backgroundColor: '#6cc24a',
+              borderColor: '#44883e',
+              textColor: '#333333',
+              icon: 'Nodejs'
+            }
+          ],
           description:
             'Optimicé el rendimiento de una aplicación medioambiental para la gestión de CO2. Participé en el desarrollo de una API para el sector de la salud para un cliente internacional. Participé en la renovación de la página corporativa de una importante marca de moda.',
           achievements: [
@@ -82,6 +117,15 @@ export default {
           date: '2020',
           title: 'NTT Data',
           position: 'Desarrollador Fullstack',
+          badges: [
+            {
+              name: 'NodeJs',
+              backgroundColor: '#6cc24a',
+              borderColor: '#44883e',
+              textColor: '#333333',
+              icon: 'Nodejs'
+            }
+          ],
           description:
             'Estuve como principal desarrollador del mantenimiento de una aplicación de gestión interna del sector energético. Estuve manteniendo el correcto funcionamiento de la API en los servicios desplegados en AWS.',
           achievements: [
@@ -94,6 +138,15 @@ export default {
           date: '2029',
           title: 'Lotería El Negrito',
           position: 'Desarrollador Fullstack',
+          badges: [
+            {
+              name: 'NodeJs',
+              backgroundColor: '#6cc24a',
+              borderColor: '#44883e',
+              textColor: '#333333',
+              icon: 'Nodejs'
+            }
+          ],
           description:
             'Desarrolle soluciones para una aplicación de gestión automática de lotería compartida ante notario. Añadí funcionalidades para la gestión interna de la empresa. Comencé el desarrollo de una aplicación para compartir lotería entre distintas administraciones.',
           achievements: [

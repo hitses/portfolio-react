@@ -1,9 +1,11 @@
 import { t } from 'i18next'
+import { Badge, type BadgeProps } from './Badge'
 
 type ExperienceProps = {
   date: string
   title: string
   position: string
+  badges: BadgeProps[]
   description: string
   achievements: string[]
 }
@@ -12,6 +14,7 @@ export const ExperienceItem = ({
   date,
   title,
   position,
+  badges,
   description,
   achievements
 }: ExperienceProps) => {
@@ -28,23 +31,9 @@ export const ExperienceItem = ({
               {position}
             </p>
             <div className='mt-8 flex flex-wrap gap-2'>
-              {/* TODO compenente de Badge */}
-              <span className='inline-block text-xs py-1 px-3 bg-neutral-100 text-neutral-600 rounded-full'>
-                React
-              </span>
-              <span className='inline-block text-xs py-1 px-3 bg-neutral-100 text-neutral-600 rounded-full'>
-                TypeScript
-              </span>
-              <span className='inline-block text-xs py-1 px-3 bg-neutral-100 text-neutral-600 rounded-full'>
-                Next.js
-              </span>
-              <span className='inline-block text-xs py-1 px-3 bg-neutral-100 text-neutral-600 rounded-full'>
-                Tailwind CSS
-              </span>
-              <span className='inline-block text-xs py-1 px-3 bg-neutral-100 text-neutral-600 rounded-full'>
-                GraphQL
-              </span>
-              {/* TODO compenente de Badge */}
+              {badges.map((badge, index) => (
+                <Badge key={index} {...badge} />
+              ))}
             </div>
           </div>
         </div>

@@ -1,4 +1,3 @@
-// en.js
 export default {
   translation: {
     navbar: {
