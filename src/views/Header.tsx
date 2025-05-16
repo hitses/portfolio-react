@@ -167,7 +167,7 @@ const Navbar: React.FC = () => {
             <React.Fragment key={element.label}>
               <a
                 href={element.href}
-                className={`hover:text-amber-300 transition-colors ${
+                className={`block hover:text-amber-300 transition-colors mb-4 ${
                   activeSection === element.href.replace('#', '')
                     ? 'text-amber-300 font-semibold'
                     : ''
@@ -176,11 +176,10 @@ const Navbar: React.FC = () => {
               >
                 {element.label}
               </a>
-              <br />
             </React.Fragment>
           ))}
 
-          <div className='w-6 cursor-pointer hover:text-amber-300 transition-colors'>
+          <div className='w-6 cursor-pointer hover:text-amber-300 transition-colors mb-4'>
             <Multilanguage
               toggleLanguage={() => {
                 toggleLanguage()
