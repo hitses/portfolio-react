@@ -23,7 +23,7 @@ const Experience: React.FC = () => {
   }[]
 
   return (
-    <main className='mb-16'>
+    <section id='experience' className='mb-16 scroll-mt-12'>
       <h2 className='text-4xl md:text-5xl font-light dark:text-white mb-16'>
         {t('experience.title')}
       </h2>
@@ -39,7 +39,7 @@ const Experience: React.FC = () => {
           achievements={experience.achievements}
         />
       ))}
-    </main>
+    </section>
   )
 }
 

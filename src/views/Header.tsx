@@ -3,15 +3,19 @@ import { useTranslation } from 'react-i18next'
 import { Moon } from '../assets/icons/Moon'
 import { Sun } from '../assets/icons/Sun'
 import { Multilanguage } from '../assets/icons/Multilanguage'
+import { useActiveSection } from '../hooks/intersection'
 
 const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation()
+
+  const sectionIds = ['home', 'projects', 'about']
+  const activeSection = useActiveSection(sectionIds)
 
   const navElements = [
     { href: '#experience', label: t('navbar.experience') },
     { href: '#projects', label: t('navbar.projects') },
     { href: '#about', label: t('navbar.about') },
-    { href: '#contact', label: t('navbar.contact') }
+    { href: 'mailto:jerogassan@gmail.com', label: t('navbar.contact') }
   ]
 
   const toggleLanguage = () => {
@@ -88,7 +92,11 @@ const Navbar: React.FC = () => {
             <a
               key={element.label}
               href={element.href}
-              className='hover:text-amber-300 transition-colors'
+              className={`hover:text-amber-300 transition-colors ${
+                activeSection === element.href.replace('#', '')
+                  ? 'text-amber-300 font-semibold'
+                  : ''
+              }`}
             >
               {element.label}
             </a>
