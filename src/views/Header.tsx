@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
         <button
           data-collapse-toggle='navbar-hamburger'
           type='button'
-          className='fixed left-8 top-8 md:hidden inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-none dark:text-gray-400 dark:hover:bg-gray-700  bg-neutral-300 dark:bg-neutral-700'
+          className='fixed left-8 top-2 md:hidden inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-none dark:text-gray-400 dark:hover:bg-gray-700  bg-neutral-300 dark:bg-neutral-700'
           aria-controls='navbar-hamburger'
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen(prev => !prev)}
