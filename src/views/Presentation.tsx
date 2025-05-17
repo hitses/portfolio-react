@@ -1,4 +1,3 @@
-import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button } from '../components/Button'
 import { Linkedin } from '../assets/icons/Linkedin'
@@ -7,6 +6,7 @@ import { Envelope } from '../assets/icons/Envelope'
 const Presentation: React.FC = () => {
   const { t } = useTranslation()
 
+  // Se calcula el número de años de experiencia desde 2019 hasta el año actual
   const yearDate = new Date().getFullYear() - 2019
 
   return (
@@ -18,11 +18,12 @@ const Presentation: React.FC = () => {
           src='/avatar.webp'
           alt='Jerónimo Gascón mirando hacia la derecha con gafas de sol'
         />
-        <span className='bottom-0 left-12 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full'></span>
+        {/* Indicador de estado (verde) superpuesto en la esquina inferior izquierda */}
+        <span className='bottom-0 left-12 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full'></span>
       </div>
       {/* Avatar */}
 
-      {/* Info */}
+      {/* Información de presentación */}
       <h1 className='mt-8 mb-4 text-4xl font-extrabold dark:text-white'>
         {t('presentation.title')}
       </h1>
@@ -35,9 +36,9 @@ const Presentation: React.FC = () => {
         <span>{t('presentation.subtitle.from')}</span>{' '}
         <span>{t('presentation.subtitle.help')}</span>
       </p>
-      {/* Info */}
+      {/* Información de presentación */}
 
-      {/* Links */}
+      {/* Botones de contacto */}
       <div className='flex gap-4 mt-4 flex-col md:flex-row md:mt-8'>
         <Button
           link='mailto:jerogassan@gmail.com'
@@ -51,7 +52,7 @@ const Presentation: React.FC = () => {
           label='LinkedIn'
         />
       </div>
-      {/* Links */}
+      {/* Botones de contacto */}
     </section>
   )
 }

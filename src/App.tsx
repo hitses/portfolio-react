@@ -10,8 +10,11 @@ import Footer from './views/Footer'
 
 const App: React.FC = () => {
   return (
+    // Proveedor de contexto para que i18next esté disponible en toda la app
     <I18nextProvider i18n={i18n}>
+      {/* Contenedor principal centrado con un ancho máximo y padding lateral */}
       <main className='max-w-[900px] mx-auto px-8 lg:px-0'>
+        {/* Secciones principales del portfolio */}
         <Header />
         <Presentation />
         <Experience />

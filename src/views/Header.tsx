@@ -18,13 +18,14 @@ const Navbar: React.FC = () => {
     { href: 'mailto:jerogassan@gmail.com', label: t('navbar.contact') }
   ]
 
+  // Cambia el idioma entre español e inglés y lo guarda en localStorage
   const toggleLanguage = () => {
     const newLang = i18n.language === 'es' ? 'en' : 'es'
-
     i18n.changeLanguage(newLang)
     localStorage.setItem('i18nextLng', newLang)
   }
 
+  // Estado inicial del modo oscuro basado en localStorage o preferencia del sistema
   const [isDarkMode, setIsDarkMode] = useState(() => {
     if (localStorage.getItem('color-theme') === 'dark') {
       return true
@@ -35,6 +36,7 @@ const Navbar: React.FC = () => {
     }
   })
 
+  // Alterna entre modo claro y oscuro, actualizando clases y localStorage
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode)
 
@@ -61,6 +63,7 @@ const Navbar: React.FC = () => {
     }
   }
 
+  // Sincroniza el estado del modo oscuro con la clase en <html> y localStorage
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark')
@@ -73,12 +76,14 @@ const Navbar: React.FC = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  // Cierra el menú hamburguesa al hacer clic en un enlace
   const handleLinkClick = () => {
     setIsMenuOpen(false)
   }
 
   return (
     <>
+      {/* Fondo para modo claro */}
       {!isDarkMode && (
         <div
           id='light-background'
@@ -88,6 +93,7 @@ const Navbar: React.FC = () => {
         </div>
       )}
 
+      {/* Fondo para modo oscuro */}
       {isDarkMode && (
         <div
           id='dark-background'
@@ -96,10 +102,11 @@ const Navbar: React.FC = () => {
       )}
 
       <header className='sticky top-1 w-[450px] mx-auto mt-1 z-10'>
+        {/* Botón hamburguesa para móviles */}
         <button
           data-collapse-toggle='navbar-hamburger'
           type='button'
-          className='fixed left-8 top-2 md:hidden inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-none dark:text-gray-400 dark:hover:bg-gray-700  bg-neutral-300 dark:bg-neutral-700'
+          className='fixed left-8 top-2 md:hidden inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-none dark:text-gray-400 dark:hover:bg-gray-700 bg-neutral-300 dark:bg-neutral-700'
           aria-controls='navbar-hamburger'
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen(prev => !prev)}
@@ -122,7 +129,9 @@ const Navbar: React.FC = () => {
           </svg>
         </button>
 
+        {/* Navegación para escritorio */}
         <nav className='hidden md:flex bg-gray-50 dark:bg-gray-900 text-zinc-900 dark:text-stone-100 flex-col md:flex-row justify-center items-center gap-4 border border-b-1 border-slate-700 rounded-full px-4 py-0.5 pt-1'>
+          {/* Elementos de navegación */}
           {navElements.map(element => (
             <a
               key={element.label}
@@ -138,6 +147,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
 
+          {/* Selector de idioma */}
           <div className='w-6 cursor-pointer hover:text-amber-300 transition-colors'>
             <Multilanguage
               toggleLanguage={() => {
@@ -147,6 +157,7 @@ const Navbar: React.FC = () => {
             />
           </div>
 
+          {/* Botón para alternar tema */}
           <button
             onClick={() => {
               toggleTheme()
@@ -160,12 +171,14 @@ const Navbar: React.FC = () => {
           </button>
         </nav>
 
+        {/* Menú hamburguesa para móviles */}
         <nav
           id='navbar-hamburger'
           className={`${
             isMenuOpen ? 'block' : 'hidden'
           } w-fit fixed top-20 left-8 bg-gray-50 dark:bg-gray-900 text-zinc-900 dark:text-stone-100 border border-b-1 border-slate-700 rounded-lg p-3 pb-2`}
         >
+          {/* Elementos de navegación */}
           {navElements.map(element => (
             <React.Fragment key={element.label}>
               <a
@@ -182,6 +195,7 @@ const Navbar: React.FC = () => {
             </React.Fragment>
           ))}
 
+          {/* Selector de idioma en menú móvil */}
           <div className='w-6 cursor-pointer hover:text-amber-300 transition-colors mb-4'>
             <Multilanguage
               toggleLanguage={() => {
@@ -191,6 +205,7 @@ const Navbar: React.FC = () => {
             />
           </div>
 
+          {/* Botón para alternar tema en menú móvil */}
           <button
             onClick={() => {
               toggleTheme()

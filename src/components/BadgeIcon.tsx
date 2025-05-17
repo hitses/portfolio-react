@@ -9,6 +9,7 @@ import Aws from '../assets/icons/Aws'
 import Python from '../assets/icons/Python'
 import type { BadgeIconProps } from '../types/badgeIcon'
 
+// Lista de los iconos que necesarios
 const iconComponents: { [key: string]: React.FC } = {
   Nodejs: Nodejs,
   Angular: Angular,

@@ -1,10 +1,16 @@
+/* Se importa la configuración base de Tailwind CSS */
 @import 'tailwindcss';
+/* Se importa el tema por defecto de Flowbite */
 @import 'flowbite/src/themes/default';
+/* Se activa el plugin de Flowbite para usar sus componentes */
 @plugin "flowbite/plugin";
+/* Se indica la ubicación de los archivos fuente de Flowbite */
 @source "../node_modules/flowbite";
 
+/* Se define una variante personalizada para aplicar estilos en modo oscuro */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Se registra la fuente Roboto con todos sus grosores */
 @font-face {
   font-family: 'Roboto';
   src: url('./assets/fonts/Roboto.woff2') format('woff2');
@@ -13,6 +19,7 @@
   font-display: swap;
 }
 
+/* Se establece Roboto como fuente principal del proyecto */
 @theme {
   --font-sans: 'Roboto', system-ui, sans-serif;
 }
