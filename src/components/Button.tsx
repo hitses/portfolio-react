@@ -1,10 +1,4 @@
-import type { ReactNode } from 'react'
-
-type ButtonProps = {
-  link: string
-  icon: ReactNode
-  label: string
-}
+import type { ButtonProps } from '../types/button'
 
 export const Button = ({ link, icon, label }: ButtonProps) => {
   return (

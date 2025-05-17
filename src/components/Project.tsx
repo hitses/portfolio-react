@@ -1,13 +1,5 @@
 import { useTranslation } from 'react-i18next'
-
-type ProjectProps = {
-  year: number
-  sector: string
-  title: string
-  description: string
-  link: string
-  img: string
-}
+import type { ProjectProps } from '../types/project'
 
 export const Project = ({
   year,
@@ -51,7 +43,7 @@ export const Project = ({
               strokeWidth='2'
               strokeLinecap='round'
               strokeLinejoin='round'
-              className='lucide lucide-arrow-up-right ml-1 h-4 w-4'
+              className='ml-1 h-4 w-4'
             >
               <path d='M7 7h10v10' />
               <path d='M7 17 17 7' />

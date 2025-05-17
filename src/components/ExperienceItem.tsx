@@ -1,14 +1,6 @@
 import { t } from 'i18next'
-import { Badge, type BadgeProps } from './Badge'
-
-type ExperienceProps = {
-  date: string
-  title: string
-  position: string
-  badges: BadgeProps[]
-  description: string
-  achievements: string[]
-}
+import { Badge } from './Badge'
+import type { ExperienceProps } from '../types/experience'
 
 export const ExperienceItem = ({
   date,

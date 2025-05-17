@@ -12,7 +12,7 @@ const savedLang = localStorage.getItem('i18nextLng') || 'es'
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: savedLang, // Default language
+  lng: savedLang, // Idioma por defecto
   fallbackLng: 'es',
   interpolation: {
     escapeValue: false
