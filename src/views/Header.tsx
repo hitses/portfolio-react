@@ -164,7 +164,7 @@ const Navbar: React.FC = () => {
           id='navbar-hamburger'
           className={`${
             isMenuOpen ? 'block' : 'hidden'
-          } w-fit fixed top-20 left-8 bg-gray-50 dark:bg-gray-900 text-zinc-900 dark:text-stone-100 border border-b-1 border-slate-700 rounded-lg px-4 py-0.5 pt-1`}
+          } w-fit fixed top-20 left-8 bg-gray-50 dark:bg-gray-900 text-zinc-900 dark:text-stone-100 border border-b-1 border-slate-700 rounded-lg p-3 pb-2`}
         >
           {navElements.map(element => (
             <React.Fragment key={element.label}>
