@@ -99,7 +99,7 @@ export default {
           ]
         },
         {
-          date: '2029',
+          date: '2019',
           title: 'Lotería El Negrito',
           position: 'Fullstack Developer',
           badges: [nodejs, mysql, angular, git],
