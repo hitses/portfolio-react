@@ -127,6 +127,15 @@ export default {
           img: '/tyboc.webp'
         },
         {
+          year: 2025,
+          sector: 'Empresarial',
+          title: 'Panel de gestión',
+          description:
+            'Plantilla de un panel de gestión interna para una empresa. Permite la visualización de datos de manera organizada y fácil de entender con gráficas y tarjetas de información dinámicas.',
+          link: 'https://front-dashboard-react-jero.vercel.app/',
+          img: '/dashboard.webp'
+        },
+        {
           year: 2024,
           sector: 'Economía',
           title: 'Monedero de Fading Suns',

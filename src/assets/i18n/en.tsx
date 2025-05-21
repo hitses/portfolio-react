@@ -127,6 +127,15 @@ export default {
           img: '/tyboc.webp'
         },
         {
+          year: 2025,
+          sector: 'Business',
+          title: 'Dashboard',
+          description:
+            'Template of an internal management panel for a company. It allows the visualization of data in an organized and easy to understand way with dynamic graphics and information cards.',
+          link: 'https://front-dashboard-react-jero.vercel.app/',
+          img: '/dashboard.webp'
+        },
+        {
           year: 2024,
           sector: 'Economy',
           title: 'Fading Suns Wallet',
